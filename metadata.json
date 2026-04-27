@@ -1,0 +1,6 @@
+{
+  "name": "Neon Snake Retro",
+  "description": "A minimal, retro-styled arcade snake game with a CRT glow aesthetic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

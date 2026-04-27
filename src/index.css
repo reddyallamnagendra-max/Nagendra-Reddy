@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0F1110] text-[#00FF41] font-mono;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.7);
+  }
+
+  .text-shadow-glow {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.8), 0 0 20px rgba(0, 255, 65, 0.4);
+  }
+
+  .flicker {
+    animation: flicker 0.15s infinite;
+  }
+
+  .flicker-fast {
+    animation: flicker-fast 0.05s infinite;
+  }
+
+  @keyframes flicker {
+    0% { opacity: 0.97; }
+    5% { opacity: 0.95; }
+    10% { opacity: 0.9; }
+    15% { opacity: 0.93; }
+    20% { opacity: 0.98; }
+    25% { opacity: 1; }
+    30% { opacity: 0.96; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes flicker-fast {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.9; }
+  }
+}
